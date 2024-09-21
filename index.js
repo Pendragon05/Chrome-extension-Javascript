@@ -10,8 +10,10 @@ inputBtn.addEventListener("click", function () {
   console.log(myLeads);
 });
 
-let listItems = "";
-for (let i = 0; i < myLeads.length; i++) {
-  ulEl.textContent += "<li>" + myLeads[i] + " ";
+function renderLeads() {
+  let listItems = "";
+  for (let i = 0; i < myLeads.length; i++) {
+    ulEl.textContent += "<li>" + myLeads[i] + " ";
+  }
+  ulEl.innerHTML = listItems;
 }
-ulEl.innerHTML = listItems;
